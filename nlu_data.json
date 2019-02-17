@@ -18,116 +18,11 @@
         "entities": []
       },
       {
-        "text": "yes maam",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "yes maam",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "yes sir",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "yes sir",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "sure",
-        "intent": "weak_affirm",
-        "entities": []
-      },
-      {
-        "text": "I think so",
-        "intent": "weak_affirm",
-        "entities": []
-      },
-      {
-        "text": "I think so",
-        "intent": "weak_affirm",
-        "entities": []
-      },
-      {
-        "text": "I believe so",
-        "intent": "weak_affirm",
-        "entities": []
-      },
-      {
-        "text": "I believe so",
-        "intent": "weak_affirm",
-        "entities": []
-      },
-      {
-        "text": "certainly",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "right",
-        "intent": "weak_affirm",
-        "entities": []
-      },
-      {
-        "text": "yup",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "yeah",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "correct",
-        "intent": "weak_affirm",
-        "entities": []
-      },
-      {
-        "text": "exactly",
-        "intent": "weak_affirm",
-        "entities": []
-      },
-      {
-        "text": "Yes I can",
-        "intent": "weak_affirm",
-        "entities": []
-      },
-      {
-        "text": "Yes I can",
-        "intent": "weak_affirm",
-        "entities": []
-      },
-      {
-        "text": "Yes I can",
-        "intent": "weak_affirm",
-        "entities": []
-      },
-      {
-        "text": "that's right",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
         "text": "no",
         "intent": "deny",
         "entities": []
       },
-      {
-        "text": "no one told me that",
-        "intent": "deny",
-        "entities": []
-      },
-      {
-        "text": "nobody told me that",
-        "intent": "deny",
-        "entities": []
-      },
-      {
+       {
         "text": "nah",
         "intent": "deny",
         "entities": []
@@ -156,109 +51,6 @@
         "text": "ok",
         "intent": "affirm",
         "entities": []
-      },
-      {
-        "text": "I am",
-        "intent": "weak_affirm",
-        "entities": []
-      },
-      {
-        "text": "I can",
-        "intent": "weak_affirm",
-        "entities": []
-      },
-      {
-        "text": "I do",
-        "intent": "weak_affirm",
-        "entities": []
-      },
-      {
-        "text": "I agree",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "Indeed",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "indeed",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "I agree",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "I agree",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "I agree",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "I would",
-        "intent": "weak_affirm",
-        "entities": []
-      },
-      {
-        "text": "I do not agree",
-        "intent": "deny",
-        "entities": []
-      },
-      {
-        "text": "No, I do not",
-        "intent": "deny",
-        "entities": []
-      },
-      {
-        "text": "alright",
-        "intent": "weak_affirm",
-        "entities": []
-      },
-      {
-        "text": "probably",
-        "intent": "weak_affirm",
-        "entities": []
-      },
-      {
-        "text": "yes please",
-        "intent": "affirm",
-        "entities": []
-      },
-       {
-        "text": "no thank you",
-        "intent": "deny",
-        "entities": []
-      },
-      {
-        "text": "not sure about that",
-        "intent": "deny",
-        "entities": []
-      },
-      {
-        "text": "I don't",
-        "intent": "deny",
-        "entities": []
-      },
-      {
-        "text": "I am not",
-        "intent": "deny",
-        "entities": []
-      },
-      {
-        "text": "just for me",
-        "intent": "inform"
-       },
-      {
-        "text": "for myself",
-        "intent": "inform"
       },
       {
         "text": "gobledygook",
@@ -333,26 +125,6 @@
       {
         "text": "howdy",
         "intent": "greet",
-        "entities": []
-      },
-      {
-        "text": "why not",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "of course",
-        "intent": "affirm",
-        "entities": []
-      },
-      {
-        "text": "no it's ok",
-        "intent": "deny",
-        "entities": []
-      },
-      {
-        "text": "why not",
-        "intent": "affirm",
         "entities": []
       },
       {
@@ -581,7 +353,7 @@
         "intent": "inform"
       },
 	  {
-        "text": "network engineer",
+        "text": "software engineer",
         "intent": "inform"
       },
 	  {
