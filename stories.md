@@ -10,17 +10,17 @@
     - ActionSNLU
     - slot{"last_name": "Grinberg"}
     - utter_AskCity
-* inform{"PERSON": "Fair Lawn"}
+* inform{"PERSON": "Springfieldn"}
     - ActionSNLU
-    - slot{"city": "Fair Lawn"}
+    - slot{"city": "Springfield"}
     - utter_AskState
-* inform{"GPE": "New Jersey"}
+* inform{"GPE": "Iowa"}
     - ActionSNLU
-    - slot{"state": "New Jersey"}
+    - slot{"state": "Iowa"}
     - utter_AskCounty
-* inform{"ORG": "Bergen"}
+* inform{"ORG": "Madison"}
     - ActionSNLU
-    - slot{"county": "Bergen"}
+    - slot{"county": "Madison"}
     - utter_AskCompanyName
 * inform
     - ActionSNLU
@@ -28,7 +28,7 @@
     - utter_AskProfession
 * inform
     - ActionSNLU
-    - slot{"profession": "network engineer"}
+    - slot{"profession": "software engineer"}
     - utter_Bye
 
 ## Generated Story 2
@@ -43,17 +43,17 @@
     - ActionSNLU
     - slot{"last_name": "Grinberg"}
     - utter_AskCity
-* inform{"PERSON": "Fair Lawn"}
+* inform{"PERSON": "Springfield"}
     - ActionSNLU
-    - slot{"city": "Fair Lawn"}
+    - slot{"city": "Springfield"}
     - utter_AskState
 * inform{"GPE": "New Jersey"}
     - ActionSNLU
     - slot{"state": "New Jersey"}
     - utter_AskCounty
-* inform{"ORG": "Bergen"}
+* inform{"ORG": "Union"}
     - ActionSNLU
-    - slot{"county": "Bergen"}
+    - slot{"county": "Union"}
     - utter_AskCompanyName
 * inform
     - ActionSNLU
@@ -61,7 +61,7 @@
     - utter_AskProfession
 * inform
     - ActionSNLU
-    - slot{"profession": "network engineer"}
+    - slot{"profession": "software engineer"}
     - utter_Bye
 
 ## Generated Story 3
@@ -76,17 +76,17 @@
     - ActionSNLU
     - slot{"last_name": "Grinberg"}
     - utter_AskCity
-* inform{"PERSON": "Fair Lawn"}
+* inform{"PERSON": "Springfield"}
     - ActionSNLU
-    - slot{"city": "Fair Lawn"}
+    - slot{"city": "Springfield"}
     - utter_AskState
-* inform{"GPE": "New Jersey"}
+* inform{"GPE": "Missouri"}
     - ActionSNLU
-    - slot{"state": "New Jersey"}
+    - slot{"state": "Missouri"}
     - utter_AskCounty
-* inform{"ORG": "Bergen"}
+* inform{"ORG": "Jackson"}
     - ActionSNLU
-    - slot{"county": "Bergen"}
+    - slot{"county": "Jackson"}
     - utter_AskCompanyName
 * inform
     - ActionSNLU
@@ -94,7 +94,7 @@
     - utter_AskProfession
 * inform
     - ActionSNLU
-    - slot{"profession": "network engineer"}
+    - slot{"profession": "software engineer"}
     - utter_Bye
 
 ## Generated Story 8845195415292730325
@@ -109,17 +109,17 @@
     - ActionSNLU
     - slot{"last_name": "Grinberg"}
     - utter_AskCity
-* inform{"PERSON": "Fair Lawn"}
+* inform{"PERSON": "Springfield"}
     - ActionSNLU
-    - slot{"city": "Fair Lawn"}
+    - slot{"city": "Springfield"}
     - utter_AskState
-* inform{"GPE": "New Jersey"}
+* inform{"GPE": "Ohio"}
     - ActionSNLU
-    - slot{"state": "New Jersey"}
+    - slot{"state": "Ohio"}
     - utter_AskCounty
-* inform{"ORG": "Bergen"}
+* inform{"ORG": "Roberts"}
     - ActionSNLU
-    - slot{"county": "Bergen"}
+    - slot{"county": "Roberts"}
     - utter_AskCompanyName
 * inform
     - ActionSNLU
@@ -127,7 +127,7 @@
     - utter_AskProfession
 * inform
     - ActionSNLU
-    - slot{"profession": "network engineer"}
+    - slot{"profession": "software engineer"}
     - utter_Bye
 
 
