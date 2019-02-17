@@ -1,0 +1,70 @@
+%YAML 1.1
+---
+actions:
+- ActionSNLU
+- utter_AskLastName
+- utter_AskProfession
+- utter_Bye
+- utter_default
+- utter_AskState
+- utter_AskCity
+- utter_AskCompanyName
+- utter_Hello
+- utter_AskFirstName
+- utter_AskCounty
+entities:
+- state
+- last_name
+- company_name
+- city
+- profession
+- county
+- client_name
+
+intents:
+- greet
+- inform
+- thank
+- bye
+- affirm
+- deny
+- out_of_scope
+- weak_affirm
+- repeat
+slots:
+  city:
+    type: text
+  client_name:
+    type: text
+  company_name:
+    type: text
+  county:
+    type: text
+  last_name:
+    type: text
+  profession:
+    type: text
+  state:
+    type: text
+templates:
+  utter_AskCity:
+  - text: What city do you live in?
+  utter_AskCompanyName:
+  - text: What company are you with?
+  utter_AskCounty:
+  - text: What county do you live in?
+  utter_AskFirstName:
+  - text: Can you please tell me your first name?
+  utter_AskLastName:
+  - text: Can you please tell me your last name?
+  utter_AskProfession:
+  - text: What do you do?
+  utter_AskState:
+  - text: What state do you live in?
+  utter_Bye:
+  - text: "{client_name} {last_name}, from {city}, {state}, county of {county}, you\
+      \ work at {company_name} as {profession}.  It's nice to meet you!?"
+  utter_Hello:
+  - text: Hello
+  utter_default:
+  - text: I don't understand what you said. Could you repeat please?
