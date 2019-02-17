@@ -1,0 +1,141 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "text": "Mary Systems",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 12,
+            "value": "Mary Systems",
+            "entity": "company"
+          }
+        ]
+      },
+      {
+        "text": "James",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "James",
+            "entity": "company"
+          }
+        ]
+      },
+      {
+        "text": "I want a pizza",
+        "intent": "out_of_scope",
+        "entities": []
+      },
+      {
+        "text": "for me the decision is clear",
+        "intent": "out_of_scope",
+        "entities": []
+      },
+      {
+        "text": "what is this",
+        "intent": "out_of_scope",
+        "entities": []
+      },
+      {
+        "text": "I work at Johnson",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 10,
+            "end": 17,
+            "value": "Johnson",
+            "entity": "company"
+          }
+        ]
+      },
+      {
+        "text": "I live in Tierney",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 10,
+            "end": 17,
+            "value": "Tierney",
+            "entity": "company"
+          }
+        ]
+      },
+      {
+        "text": "I'm at kannuri",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 7,
+            "end": 14,
+            "value": "kannuri",
+            "entity": "company"
+          }
+        ]
+      },
+      {
+        "text": "It is shanmugam company",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 6,
+            "end": 15,
+            "value": "shanmugam",
+            "entity": "company"
+          }
+        ]
+      },
+      {
+        "text": "I'm with Prokhorov",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 9,
+            "end": 18,
+            "value": "Prokhorov",
+            "entity": "company"
+          }
+        ]
+      },
+      {
+        "text": "Gold company",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "Gold",
+            "entity": "company"
+          }
+        ]
+      },
+      {
+        "text": "Gonzalez",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "Gonzalez",
+            "entity": "company"
+          }
+        ]
+      },
+      {
+        "text": "company name is Kleidmacher",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 16,
+            "end": 27,
+            "value": "Kleidmacher",
+            "entity": "company"
+          }
+        ]
+      }
+    ]
+  }
+}

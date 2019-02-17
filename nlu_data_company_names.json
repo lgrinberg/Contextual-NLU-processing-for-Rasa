@@ -1,0 +1,141 @@
+{
+  "rasa_nlu_data": {
+    "common_examples": [
+      {
+        "text": "Mary",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "Mary",
+            "entity": "county"
+          }
+        ]
+      },
+      {
+        "text": "James",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "James",
+            "entity": "county"
+          }
+        ]
+      },
+      {
+        "text": "I want a pizza",
+        "intent": "out_of_scope",
+        "entities": []
+      },
+      {
+        "text": "for me the decision is clear",
+        "intent": "out_of_scope",
+        "entities": []
+      },
+      {
+        "text": "what is this",
+        "intent": "out_of_scope",
+        "entities": []
+      },
+      {
+        "text": "Johnson",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "Johnson",
+            "entity": "county"
+          }
+        ]
+      },
+      {
+        "text": "I live in Tierney",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 10,
+            "end": 17,
+            "value": "Tierney",
+            "entity": "county"
+          }
+        ]
+      },
+      {
+        "text": "It's kannuri",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 5,
+            "end": 12,
+            "value": "kannuri",
+            "entity": "county"
+          }
+        ]
+      },
+      {
+        "text": "It is shanmugam county",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 6,
+            "end": 15,
+            "value": "shanmugam",
+            "entity": "county"
+          }
+        ]
+      },
+      {
+        "text": "Prokhorov",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "Prokhorov",
+            "entity": "county"
+          }
+        ]
+      },
+      {
+        "text": "Gold County",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "Gold",
+            "entity": "county"
+          }
+        ]
+      },
+      {
+        "text": "Gonzalez",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "Gonzalez",
+            "entity": "county"
+          }
+        ]
+      },
+      {
+        "text": "county name is Kleidmacher",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 15,
+            "end": 26,
+            "value": "Kleidmacher",
+            "entity": "county"
+          }
+        ]
+      }
+    ]
+  }
+}

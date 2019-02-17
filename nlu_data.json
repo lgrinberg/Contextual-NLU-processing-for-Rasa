@@ -1,0 +1,601 @@
+{
+  "rasa_nlu_data": {
+
+    "common_examples": [
+      {
+        "text": "how can I help you",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "how can I assist",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "yes",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "yes maam",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "yes maam",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "yes sir",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "yes sir",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "sure",
+        "intent": "weak_affirm",
+        "entities": []
+      },
+      {
+        "text": "I think so",
+        "intent": "weak_affirm",
+        "entities": []
+      },
+      {
+        "text": "I think so",
+        "intent": "weak_affirm",
+        "entities": []
+      },
+      {
+        "text": "I believe so",
+        "intent": "weak_affirm",
+        "entities": []
+      },
+      {
+        "text": "I believe so",
+        "intent": "weak_affirm",
+        "entities": []
+      },
+      {
+        "text": "certainly",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "right",
+        "intent": "weak_affirm",
+        "entities": []
+      },
+      {
+        "text": "yup",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "yeah",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "correct",
+        "intent": "weak_affirm",
+        "entities": []
+      },
+      {
+        "text": "exactly",
+        "intent": "weak_affirm",
+        "entities": []
+      },
+      {
+        "text": "Yes I can",
+        "intent": "weak_affirm",
+        "entities": []
+      },
+      {
+        "text": "Yes I can",
+        "intent": "weak_affirm",
+        "entities": []
+      },
+      {
+        "text": "Yes I can",
+        "intent": "weak_affirm",
+        "entities": []
+      },
+      {
+        "text": "that's right",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "no",
+        "intent": "deny",
+        "entities": []
+      },
+      {
+        "text": "no one told me that",
+        "intent": "deny",
+        "entities": []
+      },
+      {
+        "text": "nobody told me that",
+        "intent": "deny",
+        "entities": []
+      },
+      {
+        "text": "nah",
+        "intent": "deny",
+        "entities": []
+      },
+      {
+        "text": "nope",
+        "intent": "deny",
+        "entities": []
+      },
+      {
+        "text": "no way",
+        "intent": "deny",
+        "entities": []
+      },
+      {
+        "text": "that's not the case",
+        "intent": "deny",
+        "entities": []
+      },
+      {
+        "text": "I'd rather not",
+        "intent": "deny",
+        "entities": []
+      },
+      {
+        "text": "ok",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "I am",
+        "intent": "weak_affirm",
+        "entities": []
+      },
+      {
+        "text": "I can",
+        "intent": "weak_affirm",
+        "entities": []
+      },
+      {
+        "text": "I do",
+        "intent": "weak_affirm",
+        "entities": []
+      },
+      {
+        "text": "I agree",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "Indeed",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "indeed",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "I agree",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "I agree",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "I agree",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "I would",
+        "intent": "weak_affirm",
+        "entities": []
+      },
+      {
+        "text": "I do not agree",
+        "intent": "deny",
+        "entities": []
+      },
+      {
+        "text": "No, I do not",
+        "intent": "deny",
+        "entities": []
+      },
+      {
+        "text": "alright",
+        "intent": "weak_affirm",
+        "entities": []
+      },
+      {
+        "text": "probably",
+        "intent": "weak_affirm",
+        "entities": []
+      },
+      {
+        "text": "yes please",
+        "intent": "affirm",
+        "entities": []
+      },
+       {
+        "text": "no thank you",
+        "intent": "deny",
+        "entities": []
+      },
+      {
+        "text": "not sure about that",
+        "intent": "deny",
+        "entities": []
+      },
+      {
+        "text": "I don't",
+        "intent": "deny",
+        "entities": []
+      },
+      {
+        "text": "I am not",
+        "intent": "deny",
+        "entities": []
+      },
+      {
+        "text": "just for me",
+        "intent": "inform"
+       },
+      {
+        "text": "for myself",
+        "intent": "inform"
+      },
+      {
+        "text": "gobledygook",
+        "intent": "out_of_scope",
+        "entities": []
+      },
+      {
+        "text": "blah blah blah",
+        "intent": "out_of_scope",
+        "entities": []
+      },
+      {
+        "text": "forget about this",
+        "intent": "out_of_scope",
+        "entities": []
+      },
+      {
+        "text": "i don't get this stuff",
+        "intent": "out_of_scope",
+        "entities": []
+      },
+      {
+        "text": "I don't get it",
+        "intent": "out_of_scope",
+        "entities": []
+      },
+      {
+        "text": "hello",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "Hi",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "Hey",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "good morning",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "good afternoon",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "good evening",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "hi there",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "hi",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "hey",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "howdy",
+        "intent": "greet",
+        "entities": []
+      },
+      {
+        "text": "why not",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "of course",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "no it's ok",
+        "intent": "deny",
+        "entities": []
+      },
+      {
+        "text": "why not",
+        "intent": "affirm",
+        "entities": []
+      },
+      {
+        "text": "I'm sorry I didn't catch that",
+        "intent": "repeat",
+        "entities": []
+      },
+      {
+        "text": "what",
+        "intent": "repeat",
+        "entities": []
+      },
+      {
+        "text": "what's that",
+        "intent": "repeat",
+        "entities": []
+      },
+      {
+        "text": "what is it",
+        "intent": "repeat",
+        "entities": []
+      },
+      {
+        "text": "what is this",
+        "intent": "repeat",
+        "entities": []
+      },
+      {
+        "text": "I can't hear",
+        "intent": "repeat",
+        "entities": []
+      },
+      {
+        "text": "I didn't hear",
+        "intent": "repeat",
+        "entities": []
+      },
+      {
+        "text": "what is that",
+        "intent": "repeat",
+        "entities": []
+      },
+      {
+        "text": "I'm sorry I didn't hear that",
+        "intent": "repeat",
+        "entities": []
+      },
+      {
+        "text": "can you repeat that",
+        "intent": "repeat",
+        "entities": []
+      },
+      {
+        "text": "say that again",
+        "intent": "repeat",
+        "entities": []
+      },
+      {
+        "text": "I'm sorry I didn't catch that",
+        "intent": "repeat",
+        "entities": []
+      },
+      {
+        "text": "I'm sorry I didn't hear that",
+        "intent": "repeat",
+        "entities": []
+      },
+      {
+        "text": "can you repeat that",
+        "intent": "repeat",
+        "entities": []
+      },
+      {
+        "text": "say that again",
+        "intent": "repeat",
+        "entities": []
+      },
+      {
+        "text": "I'm sorry I didn't catch that",
+        "intent": "repeat",
+        "entities": []
+      },
+      {
+        "text": "I'm sorry I didn't hear that",
+        "intent": "repeat",
+        "entities": []
+      },
+      {
+        "text": "can you repeat that",
+        "intent": "repeat",
+        "entities": []
+      },
+      {
+        "text": "say that again",
+        "intent": "repeat",
+        "entities": []
+      },
+      {
+        "text": "I'm sorry I didn't catch that",
+        "intent": "repeat",
+        "entities": []
+      },
+      {
+        "text": "I'm sorry I didn't hear that",
+        "intent": "repeat",
+        "entities": []
+      },
+      {
+        "text": "can you repeat that",
+        "intent": "repeat",
+        "entities": []
+      },
+      {
+        "text": "say that again",
+        "intent": "repeat",
+        "entities": []
+      },
+      {
+        "text": "I'm sorry I didn't catch that",
+        "intent": "repeat",
+        "entities": []
+      },
+      {
+        "text": "I'm sorry I didn't hear that",
+        "intent": "repeat",
+        "entities": []
+      },
+      {
+        "text": "I don't get it",
+        "intent": "repeat",
+        "entities": []
+      },
+      {
+        "text": "I'm sorry, can you start over again",
+        "intent": "repeat",
+        "entities": []
+      },
+      {
+        "text": "my name is John",
+        "intent": "inform"
+      },
+      {
+        "text": "John",
+        "intent": "inform"
+       },
+      {
+        "text": "Mary",
+        "intent": "inform"
+       },
+      {
+        "text": "Elizabeth",
+        "intent": "inform"
+       },
+      {
+        "text": "James",
+        "intent": "inform"
+       },
+      {
+        "text": "my name is William",
+        "intent": "inform"
+	},
+      {
+        "text": "my name is Lisa",
+        "intent": "inform"
+        
+      },
+      {
+        "text": "my name is Jennifer",
+        "intent": "inform"
+        
+      },
+	  {
+        "text": "my last name is Sundquist",
+        "intent": "inform"
+      },
+	   {
+        "text": "last name is Cohen",
+        "intent": "inform"
+      },
+	   {
+        "text": "it is Ramamoorthy",
+        "intent": "inform"
+      },
+	   {
+        "text": "it's McCarthy",
+        "intent": "inform"
+      },
+	   {
+        "text": "Ridgewood",
+        "intent": "inform"
+      },
+	  {
+        "text": "Berlin",
+        "intent": "inform"
+      },
+	  	   {
+        "text": "I live in Glen Ridge",
+        "intent": "inform"
+      },
+	  {
+        "text": "In Mountain View",
+        "intent": "inform"
+      },
+	  {
+        "text": "In South Dakota",
+        "intent": "inform"
+      },
+	  {
+        "text": "Minnesota",
+        "intent": "inform"
+      },
+	  {
+        "text": "The city of Chicago",
+        "intent": "inform"
+      },
+	  {
+        "text": "The great state of Texas",
+        "intent": "inform"
+      },
+	  {
+        "text": "Fairfax county",
+        "intent": "inform"
+      },
+	  {
+        "text": "Prince William County",
+        "intent": "inform"
+      },
+	  {
+        "text": "network engineer",
+        "intent": "inform"
+      },
+	  {
+        "text": "electrician",
+        "intent": "inform"
+      },
+	  {
+        "text": "I work as a software developer",
+        "intent": "inform"
+      },
+	  {
+        "text": "I am in marketing",
+        "intent": "inform"
+      }
+    ]
+  }
+}

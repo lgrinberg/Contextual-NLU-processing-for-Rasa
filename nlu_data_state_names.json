@@ -1,0 +1,147 @@
+{
+  "rasa_nlu_data": {
+     "lookup_tables": [
+      {
+        "name": "state",
+        "elements": "states.txt"
+      }
+    ],
+    "common_examples": [
+      {
+        "text": "Mary",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "Mary",
+            "entity": "state"
+          }
+        ]
+      },
+      {
+        "text": "James",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 5,
+            "value": "James",
+            "entity": "state"
+          }
+        ]
+      },
+      {
+        "text": "I want a pizza",
+        "intent": "out_of_scope",
+        "entities": []
+      },
+      {
+        "text": "for me the decision is clear",
+        "intent": "out_of_scope",
+        "entities": []
+      },
+      {
+        "text": "what is this",
+        "intent": "out_of_scope",
+        "entities": []
+      },
+      {
+        "text": "Johnson",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 7,
+            "value": "Johnson",
+            "entity": "state"
+          }
+        ]
+      },
+      {
+        "text": "I live in Tierney",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 10,
+            "end": 17,
+            "value": "Tierney",
+            "entity": "state"
+          }
+        ]
+      },
+      {
+        "text": "It's kannuri",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 5,
+            "end": 12,
+            "value": "kannuri",
+            "entity": "state"
+          }
+        ]
+      },
+      {
+        "text": "It is shanmugam",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 6,
+            "end": 15,
+            "value": "shanmugam",
+            "entity": "state"
+          }
+        ]
+      },
+      {
+        "text": "Prokhorov",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 9,
+            "value": "Prokhorov",
+            "entity": "state"
+          }
+        ]
+      },
+      {
+        "text": "Gold",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 4,
+            "value": "Gold",
+            "entity": "state"
+          }
+        ]
+      },
+      {
+        "text": "Gonzalez",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 0,
+            "end": 8,
+            "value": "Gonzalez",
+            "entity": "state"
+          }
+        ]
+      },
+      {
+        "text": "last name is Kleidmacher",
+        "intent": "inform",
+        "entities": [
+          {
+            "start": 13,
+            "end": 24,
+            "value": "Kleidmacher",
+            "entity": "state"
+          }
+        ]
+      }
+    ]
+  }
+}
