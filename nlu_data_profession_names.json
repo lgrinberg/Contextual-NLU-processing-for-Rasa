@@ -53,13 +53,13 @@
         ]
       },
       {
-        "text": "I work as a network engineer",
+        "text": "I work as a software engineer",
         "intent": "inform",
         "entities": [
           {
             "start": 12,
-            "end": 29,
-            "value": "network engineer",
+            "end": 30,
+            "value": "software engineer",
             "entity": "profession"
           }
         ]
