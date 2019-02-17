@@ -1,0 +1,209 @@
+1.  Invoke CustomAction "ActionSNLU".  This action always follows the "inform" action in the stories in the "stories.md" file.
+2.  The CustomAction code is as follows
+class ActionSNLU(Action):
+    def name(self):
+        return "ActionSNLU"
+    
+    def run(self, dispatcher, tracker, domain):
+        #get the latest user utterance and pass it
+        #with the tracker for the Special NLU processing
+        #print('invoked ActionSNLU')
+        user_message = tracker.latest_message.get('text')
+        #print('user message is ', user_message)
+        nlu_output, utter_action = snlu_api(user_message, tracker)
+        print(nlu_output)
+        #get a dictionary of questions (utter_action) and answers (entity in the output)
+        entities = get_entity_value()
+        slot = entities[utter_action]
+        ##now parse nlu_output to find out the entity
+        entity_value, entity_confidence = parse_nlu_output(nlu_output)
+        return [SlotSet(slot, entity_value)]
+
+3.  First we obtain the user’s input  (user_message) from the “tracker.latest_message.get(‘text’)
+
+4.  Then we invoke the snlu_api function, passing the user_message and the current tracker to it.  The snlu_api code is as follows:
+
+def snlu_api(text, tracker):
+
+    server_set, QAMapping = initialize('snlu_set.txt', 'QAMapping.txt')
+    
+    #get previous utter_action
+    utter_action = get_last_utter_action(tracker)
+    #utter_action = 'utter_ask_first_name'
+    #if it is in QA Mapping & server in serverset
+    
+    try:
+        project_dir = server_set[QAMapping[utter_action]][0]['project_dir']
+        server_port = server_set[QAMapping[utter_action]][1]['port']
+    except:
+        try:
+            pass
+            # print(server_set[QAMapping[utter_action][0]])
+        except:
+            pass
+        response = 'Error, action or server not found!'
+	       #  then invoke the request to appropriate port
+                       response = request_nlu(text, project_dir, server_port)
+                       return [ response, utter_action ]
+
+5.  In the “snlu_api” function first step is to import the server/question mapping and the server information using the “initialize” function that takes the server/question (QAMapping) and server information (snlu_set) files as input.  The initialize function is as follows:
+
+def initialize(server_set_file_name, QAMapping_file_name):
+    lines = open(server_set_file_name, 'r')
+    server_set = {}
+    for line in lines:
+        data = line.replace('\n',"").split(',')
+        #first element is the server name, second is the project directory
+        #3rd is the port
+        server_set[data[0]] = []
+        server_set[data[0]].append({'project_dir': data[1]})
+        server_set[data[0]].append({'port': data[2]})
+       # print(server_set)
+    
+    lines = open(QAMapping_file_name, 'r')
+    QAMapping = {}
+    for line in lines:
+        data = line.replace("\n", "").split(',')
+        #first line is the question action
+        #second line is the server to use
+        QAMapping[data[0]] = data[1]
+        #print(QAMapping)
+
+    return server_set, QAMapping  
+
+
+The QA Mapping file is in the format “$Question_Fuction,$Server_Name” e.g:
+		
+utter_AskCity,city_name
+utter_AskFirstName,first_name
+utter_AskLastName,last_name
+utter_AskProfession,profession_name
+
+The server set file in the format “$Server_Name,$Project_Dir,$Server_Port” e.g.:
+
+		first_name,name_server,5061
+last_name,lastname_server,5062
+city_name,city_server,5063
+
+
+The QA Mapping and the Server  information is created  as dictionaries and returned to the calling function.
+
+NOTE 1:  Instead of using the “initialize” function this mapping could be created directly as a python object.
+NOTE 2: instead of passing ports for the server (I did this because all of the NLU instances are run on localhost and port is used as the differentiator), we could put the URL in the file. 
+
+6.  The last “utter” action is extracted by the get_last_utter_action function to which the tracker is passed.  This action identifies the question that was asked to the user and is listed in the QAMapping.txt file. The function code is as follows:
+
+
+def get_last_utter_action(tracker):
+    ##goes back through the list of events and finds
+    ##the last utter_action
+    for event in reversed(tracker.events):
+        #print(event.get("event"))
+        try:
+            #print("current action name is", event.get('name'))
+            if event.get('name') not in [ 'action_listen', 'ActionSNLU', None , 'action_default_fallback', 'repeat'] :
+                last_utter_action = event.get('name')
+                #print('found action', last_utter_action)
+                return last_utter_action
+            else :
+                #print(event.get('name'))
+                pass
+        except:
+            pass
+            #print(event.get('text'))
+    return 'error! no last action found'
+
+The function reverses the list of event objects (Note: these are NOT the same as the Event class) in the tracker.  The “utter” actions name is given by event.get(‘name’) function.  If the action name is not in the [‘action_listen’, ‘Action_SNLU’, None, ‘action_default_fallback’, ‘repeat’] set, then we can assume it is an utter action asking the user for information.  
+
+NOTE  #1:  ‘None” actions are those that are where the user speaks, ‘action_default_fallback’ and ‘repeat’ are included in the list so that in the case the bot repeats the question, we can correctly get past that action to the original question asked. 
+NOTE #2:  Error handling could probably be improved here.
+
+7. Once we have the last utter action, we set the project directory and port that we will need to send the request to the NLU server:
+    try:
+        project_dir = server_set[QAMapping[utter_action]][0]['project_dir']
+        server_port = server_set[QAMapping[utter_action]][1]['port']
+    except:
+        try:
+            pass
+            # print(server_set[QAMapping[utter_action][0]])
+        except:
+            pass
+        response = 'Error, action or server not found!'
+
+NOTE: Error handling could probable be improved here.
+8.  Send the request to the appropriate NLU server by invoking the request_nlu function and passing to it the text for NLU processing, the project directory and the server port:
+response = request_nlu(text, project_dir, server_port)
+
+def request_nlu(text, project_dir, port):
+    url = 'http://localhost:' + port + '/parse'
+    data = {
+        "q": text,
+        "project": project_dir,
+        "model": "nlu"
+    }
+    try:	
+        response = requests.post(url, json=data)
+    except Exception as e:
+        print(e)
+        return None
+    
+    return response.json()
+
+NOTE #1:  This bot is using the NLU servers running on localhost therefore the different servers are distinguished by their ports.  If servers on different URL’s are used, or a server is loaded with multiple NLU models, then the URL will not need to contain the port information.  Similarly, if a dedicated server is used, the project can always be set to “current”.  However, for the sake of flexibility, it seems to me that we need to give the user as many options as possible, and let them pick the particulars that suit them the most.
+
+NOTE #2:  The information is returned in form of a python object.  We should probably put an option to have it returned in the original JSON text format
+
+9.  Now we need to map the entity/slot that will match the last question asked.  That mapping is done by the get_entity_value() function that uses the entity_mapping.txt file as input.
+
+entities = get_entity_value()
+                slot = entities[utter_action]
+
+def get_entity_value():
+    lines = open('entity_mapping.txt', 'r')
+    entities = {}
+    for line in lines:
+        data = line.replace('\n',"").split(',')
+        entities[data[0]] = data[1]
+    return entities
+
+The entity file has the format of “$action_name,$entity”, e.g.:
+
+	utter_AskCity,city
+utter_AskFirstName,client_name
+utter_AskLastName,last_name
+utter_AskProfession,profession
+
+
+10.  Now we extract the entity value from the CNLU output using the parse_nlu_output function to which we pass the python object returned by the CNLU server
+: 
+entity_value, entity_confidence = parse_nlu_output(nlu_output)
+		
+def parse_nlu_output(data):
+    spacy = False
+    if data['intent']['name'] == 'inform'  and len(data['entities']) > 0  :
+        for entity in data['entities'] :
+            if entity['extractor'] == 'ner_spacy' :
+                spacy = True
+                spacy_value = entity['value']
+            elif entity['extractor'] == 'ner_crf' :
+                crf_value = entity['value']
+                crf_confidence = entity['confidence']
+
+        if spacy :
+            return [ spacy_value, 0.0 ]
+        else: 
+            return [ crf_value, crf_confidence ]
+            
+    else:
+	    return ["error.  data not recognized", 0.0]
+
+The algorithm used is as follows:  if there’s an entity extracted by Spacy, we return it, otherwise we return the entity extracted by ner_crf if it exists, otherwise we return an error.  We also return the crf_confidence value in case the user wants to use it.
+
+NOTE: Error handling could probably be improved here.
+
+11.  Finally we set the slot determined in step #9 with the value obtained in #10.
+
+return [SlotSet(slot, entity_value)]
+
+
+	
